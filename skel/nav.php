@@ -12,11 +12,13 @@
                     <li class="nav-item">
                       <a class="nav-link" href="../../backend/includes/logout.inc.php">logout</a>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="./adminDash.php">HOME<span class="sr-only">(current)</span></a>
-                    </li>
-
                 </ul>
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./adminDash.php">HOME<span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+
             </div>
         </div>
     </nav>
