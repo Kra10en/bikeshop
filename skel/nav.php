@@ -15,6 +15,18 @@
                     <li class="nav-item active">
                       <a class="nav-link" href="./adminDash.php">HOME<span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./inventory.php">INVENTORY<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./sales.php">SALES<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./customers.php">CUSTOMERS<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./vendors.php.php">VENDORS<span class="sr-only">(current)</span></a>
+                    </li>
 
                 </ul>
             </div>
