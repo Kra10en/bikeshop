@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav justify-content-center">
                     <li class="nav-item active">
-                      <a class="nav-link" href="../index.php">"Gallery"<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="../../index.php">Back to Gallery<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
