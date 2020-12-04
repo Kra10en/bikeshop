@@ -5,9 +5,8 @@
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../backend/includes/logout.inc.php">logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
