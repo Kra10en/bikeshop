@@ -43,7 +43,7 @@ session_start();
         <button type="button" href="./employees.php" class="list-group-item list-group-item-action active">Employees Records</button>
       </ul>
       <br>
-      <button type="button" class="btn btn-secondary">Items NOT Processed!<span class="badge badge-danger">69</span>
+      <button type="button" class="btn btn-info">Items NOT Processed!<span class="badge badge-danger">69</span>
       </button>
     </div>
   </section>
