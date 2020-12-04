@@ -42,7 +42,8 @@ session_start();
         <li class="list-group-item">Employee 04</li>
         <button type="button" href="./employees.php" class="list-group-item list-group-item-action active">Employees Records</button>
       </ul>
-      <button type="button" class="btn btn-primary">Items NOT Processed!<span class="badge badge-danger">69</span>
+      <br>
+      <button type="button" class="btn btn-secondary">Items NOT Processed!<span class="badge badge-danger">69</span>
       </button>
     </div>
   </section>
