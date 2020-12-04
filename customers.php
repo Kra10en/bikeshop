@@ -9,7 +9,7 @@ if (!isset($_SESSION['userID'])) {
     echo '<title>Customers Page</title>';
     
     include('./skel/header.php');
-    include('./skel/nav.php');
+    include('./skel/navEmployee.php');
 #====================================BODY=======================================
 ?>
 

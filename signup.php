@@ -9,7 +9,7 @@ if (!isset($_SESSION['userID'])) {
     echo '<title>Register - Bshop</title>';
     
     include('./skel/header.php');
-    include('./skel/nav.php');
+    include('./skel/navAdmin.php');
 #====================================BODY=======================================
 ?>
 

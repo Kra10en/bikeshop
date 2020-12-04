@@ -3,7 +3,7 @@
     echo '<title>Logi - Bshop</title>';
     
     include('./skel/header.php');
-    include('./skel/nav.php');
+    include('./skel/navLogin.php');
 #====================================BODY=======================================
 
 if (isset($_SESSION['userID'])) {} else {

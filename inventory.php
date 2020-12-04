@@ -9,7 +9,7 @@ if (!isset($_SESSION['userID'])) {
     echo '<title>inventory - Bshop</title>';
     
     include('./skel/header.php');
-    include('./skel/nav.php');
+    include('./skel/navEmployee.php');
 #====================================BODY=======================================
 ?>
     <main class="page catalog-page">

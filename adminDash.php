@@ -9,7 +9,7 @@ session_start();
     echo '<title>Admin Dashboard</title>';
 
     include('./skel/header.php');
-    include('./skel/nav.php');
+    include('./skel/navAdmin.php');
 #====================================BODY=======================================
 ?>
 <main class="page">
