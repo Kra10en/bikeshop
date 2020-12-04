@@ -15,6 +15,8 @@ session_start();
 <main class="page">
   <section class="clean-block dark">
       <div class="container">
+        <button type="button" class="btn btn-info">Items NOT Processed!<span class="badge badge-danger">69</span>
+        </button>
         <br>
         <h1> Good to be back right (NAME) </h1>
         <div class="input-group">
@@ -42,9 +44,7 @@ session_start();
         <li class="list-group-item">Employee 04</li>
         <button type="button" href="./employees.php" class="list-group-item list-group-item-action active">Employees Records</button>
       </ul>
-      <br>
-      <button type="button" class="btn btn-info">Items NOT Processed!<span class="badge badge-danger">69</span>
-      </button>
+
     </div>
   </section>
 </main>
