@@ -34,6 +34,13 @@ session_start();
       <button type="button" class="btn btn-outline-warning">Register New User</button>
       </div>
       <br>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Employee 00</li>
+        <li class="list-group-item">Employee 01</li>
+        <li class="list-group-item">Employee 02</li>
+        <li class="list-group-item">Employee 03</li>
+        <li class="list-group-item">Employee 04</li>
+      </ul>
     </div>
   </section>
 </main>
