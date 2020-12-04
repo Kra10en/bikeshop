@@ -8,7 +8,7 @@
           </button>
 
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav justify-content-center">
+                <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="../../index.php">Back to Gallery<span class="sr-only">(current)</span></a>
                     </li>
