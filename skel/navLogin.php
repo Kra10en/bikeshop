@@ -8,28 +8,10 @@
           </button>
 
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-
+                <ul class="nav justify-content-center">
                     <li class="nav-item active">
-                      <a class="nav-link" href="./adminDash.php">HOME<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="../index.php">"Gallery"<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="./inventory.php">INVENTORY<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="./sales.php">SALES<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="./customers.php">CUSTOMERS<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="./vendors.php.php">VENDORS<span class="sr-only">(current)</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="../../backend/includes/logout.inc.php">logout</a>
-                    </li>
-
                 </ul>
             </div>
         </div>
