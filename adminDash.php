@@ -40,6 +40,7 @@ session_start();
         <li class="list-group-item">Employee 02</li>
         <li class="list-group-item">Employee 03</li>
         <li class="list-group-item">Employee 04</li>
+        <button type="button" href="./employees.php" class="list-group-item list-group-item-action">Employees Records</button>
       </ul>
     </div>
   </section>
