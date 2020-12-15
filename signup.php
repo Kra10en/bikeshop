@@ -28,26 +28,27 @@ session_start();
                     <div class="form-group"><label for="password">Confirm Password</label><input class="form-control item" name="pwdConfirm" type="password" placeholder="*****************" id="password"></div>
                     <button class="btn btn-primary btn-block" type="submit">Sign Up</button></form>
             </div>
+            <?php
+              if(isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyfields") {
+                  echo "<p>Fill in the fields</p>";
+                }elseif ($_GET["error"] == "wrongemail") {
+                  echo "<p>Email format is wrong!</p>";
+                }elseif ($_GET["error"] == "nomatchpasswords") {
+                  echo "<p>OH MY GOD the password is doesnt match. do it again...</p>";
+                }elseif ($_GET["error"] == "emailexists") {
+                  echo "<p>Email alread exists in the databases! hmmm...OO </p>";
+                }elseif ($_GET["error"] == "sqlfail") {
+                  echo "<p>statment failed lol</p>";
+                }elseif ($_GET["error"] == "noerror") {
+                  echo "<p>Employee has been registered! Cool! what is next? </p>";
+                }
+              }
+             ?>
         </section>
     </main>
 
-    <?php
-      if(isset($_GET["error"])) {
-        if ($_GET["error"] == "emptyfields") {
-          echo "<p>Fill in the fields</p>";
-        }elseif ($_GET["error"] == "wrongemail") {
 
-        }elseif ($_GET["error"] == "nomatchpasswords") {
-
-        }elseif ($_GET["error"] == "emailexists") {
-
-        }elseif ($_GET["error"] == "sqlfail") {
-
-        }elseif ($_GET["error"] == "noerror") {
-
-        }
-      }
-     ?>
 
 <?php
 #=================================END-BODY======================================
