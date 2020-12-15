@@ -1,20 +1,9 @@
 <?php
 
 # function used in the signup.inc.php used to check if fields are empty
-function emptyFieldSignup($empName, $empEmail, $empUID, $empPwd, $empPwdConfirm) {
+function emptyFieldSignup($empName, $empEmail, $empPwd, $empPwdConfirm) {
   $result;
-  if (empty($empName) || empty($emptyEmail) || empty($empUID) || empty($empPwd) || empty($empPwdConfirm)) {
-    $result = true;
-  } else {
-    $result = false;
-  }
-  return $result;
-}
-
-#function used in the signup.inc.php used to check if the user is properly formatted
-function wrongUID($empUID) {
-  $result;
-  if (preg_match("/^[a-zA-Z0-9]*$/"), $empUID) {
+  if (empty($empName) || empty($emptyEmail) || empty($empPwd) || empty($empPwdConfirm)) {
     $result = true;
   } else {
     $result = false;
@@ -42,4 +31,27 @@ function passwordConfirm($empPwd, $empPwdConfirm) {
     $result = true;
   }
   return $result;
+}
+
+function emailExists($conn, $empEmail) {
+  $sql = "SELECT * FROM person WHERE `e-mail` = ?; ";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlFailed");
+    exit();
+  }
+
+  mysqli_stmt_bind_param($stmt, "ss", $empEmail);
+  mysqli_stmt_execute($stmt);
+
+  $resultStmt = mysqli_stmt_get_result($stmt);
+
+  if ($row = mysqli_fetch_assoc($resultStmt)){
+    return $row;
+  } else {
+    $result = false;
+    return $result;
+  }
+
+  mysqli_stmt_close($stmt);
 }

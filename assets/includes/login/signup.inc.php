@@ -3,18 +3,13 @@
 if (isset($_POST["addEmpSubmit"])) {
   $empName = $_POST["name"];
   $empEmail = $_POST["email"];
-  $empUID = $_POST["uid"];
   $empPwd = $_POST["pwd"];
   $empPwdConfirm = $_POST["pwdConfirm"];
 
   require_once 'adminConn.inc.php';
   require_once 'functions.inc.php';
 
-  if (emptyFieldSignup($empName, $empEmail, $empUID, $empPwd, $empPwdConfirm) == true ) {
-    header("location: ../../../signup.php?error=emptyField");
-    exit();
-  }
-  if (wrongUID($empUID) == true ) {
+  if (emptyFieldSignup($empName, $empEmail, $empPwd, $empPwdConfirm) == true ) {
     header("location: ../../../signup.php?error=emptyField");
     exit();
   }
@@ -26,12 +21,12 @@ if (isset($_POST["addEmpSubmit"])) {
     header("location: ../../../signup.php?error=passwordsNotMatching");
     exit();
   }
-  if (takenUID($conn, $empUID) == true ) {
-    header("location: ../../../signup.php?error=usernameBeenTaken");
+  if (emailExists($conn, $empEmail) == true ) {
+    header("location: ../../../signup.php?error=emailExists!");
     exit();
   }
 
-  createEmp($conn, $empName, $empEmail, $empUID, $empPwd);
+  createEmp($conn, $empName, $empEmail, $empPwd);
 
 }else {
   header("location: ../../../signup.php");
