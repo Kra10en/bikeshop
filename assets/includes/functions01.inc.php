@@ -85,7 +85,7 @@ function showEmp($conn) {
   }
 
       function avgSales_week($conn) {
-  $sql = "call salesavg_today();";
+  $sql = "call salesavg_week();";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlfail");
@@ -93,7 +93,7 @@ function showEmp($conn) {
   }
 
       function avgSales_month($conn) {
-  $sql = "call salesavg_today();";
+  $sql = "call salesavg_month();";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlfail");
@@ -101,7 +101,7 @@ function showEmp($conn) {
   }
 
       function avgSales_year($conn) {
-  $sql = "call salesavg_today();";
+  $sql = "call salesavg_year();";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlfail");
