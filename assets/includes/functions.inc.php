@@ -16,7 +16,7 @@ function emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfi
 #function used in the signup.inc.php used to check if the email is in the proper format
 function wrongEmail($empEmail) {
   $result;
-  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  if (filter_var($empEmail, FILTER_VALIDATE_EMAIL)) {
     $result = false;
   } else {
     $result = true;
