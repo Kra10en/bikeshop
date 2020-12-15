@@ -16,7 +16,7 @@ function emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfi
 #function used in the signup.inc.php used to check if the email is in the proper format
 function wrongEmail($empEmail) {
   $result;
-  if (filter_var($email, FILTER_VALIDATE_EMAIL) {
+  if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $result = false;
   } else {
     $result = true;
@@ -36,7 +36,7 @@ function passwordConfirm($empPwd, $empPwdConfirm) {
 }
 
 function emailExists($conn, $empEmail) {
-  $sql = "SELECT * FROM person WHERE `e-mail`=? ";
+  $sql = "SELECT * FROM person WHERE `e-mail`=?; ";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlfail");
