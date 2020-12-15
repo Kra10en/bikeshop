@@ -93,6 +93,7 @@ function loginEmp($conn, $empEmail, $empPwd) {
 
   if ($emailExists === false) {
     header("location: ../../../login.php?error=invalidlogin");
+    exit();
   }
   $empPwdHashed = $emailExists["password"];
 
