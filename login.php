@@ -8,7 +8,7 @@
 
 if (isset($_SESSION['userID'])) {} else {
 
-echo '
+?>
     <main class="page login-page">
         <section class="clean-block clean-form dark">
             <div class="container">
@@ -27,14 +27,14 @@ echo '
               if(isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyfields") {
                   echo "<p>Fill in the fields</p>";
-                }elseif ($_GET["error"] == "invalidlogin") {
+                }else if ($_GET["error"] == "invalidlogin") {
                   echo "<p>Something is not right! try again OO</p>";
                 }
               }
              ?>
         </section>
     </main>
-    ';
+<?php
 }
 
 #=================================END-BODY======================================
