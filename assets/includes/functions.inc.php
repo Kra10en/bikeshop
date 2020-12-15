@@ -27,7 +27,7 @@ function wrongEmail($empEmail) {
 #function used in the signup.inc.php used to check if the passwords match
 function passwordConfirm($empPwd, $empPwdConfirm) {
   $result;
-  if ($empPwd == $empPwdConfirm) {
+  if ($empPwd !== $empPwdConfirm) {
     $result = true;
   } else {
     $result = false;
