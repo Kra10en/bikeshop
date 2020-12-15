@@ -89,7 +89,7 @@ function emptyFieldLogin($empEmail, $empPwd) {
 
 #function to get employee-id
 function getEmpId($conn, $empEmail) {
-  $emailExists = emailExists($conn, $empEmail);
+  $emailExists = emailExists($conn, $empEmail, $empEmail);
   if ($emailExists === false) {
     header("location: ../../../login.php?error=invalidloginemail");
     exit();
