@@ -23,6 +23,15 @@ echo '
                         <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
                     </div><button class="btn btn-primary btn-block" type="submit" name="loginSubmit">Log In</button></form>
             </div>
+            <?php
+              if(isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyfields") {
+                  echo "<p>Fill in the fields</p>";
+                }elseif ($_GET["error"] == "invalidlogin") {
+                  echo "<p>Something is not right! try again OO</p>";
+                }
+              }
+             ?>
         </section>
     </main>
     ';
