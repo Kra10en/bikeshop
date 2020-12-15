@@ -32,5 +32,4 @@ if (isset($_POST["addEmpSubmit"])) {
 }else {
   header("location: ../../../signup.php");
   exit();
-
 }

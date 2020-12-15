@@ -20,7 +20,7 @@ session_start();
                     <h2 class="text-info">Registrationi</h2>
                     <p>This page is to register an employee only accessable by the admin.</p>
                 </div>
-                <form action="./assets/includes/login/signup.inc.php" method="post">
+                <form action="assets/includes/login/signup.inc.php" method="post">
                     <div class="form-group"><label for="name">First Name</label><input class="form-control item" name="fname" type="text" id="name"></div>
                     <div class="form-group"><label for="name">Last Name</label><input class="form-control item" name="lname" type="text" id="name"></div>
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" name="email" type="email" id="email"></div>
