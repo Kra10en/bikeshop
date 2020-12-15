@@ -4,9 +4,9 @@
 function emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) {
   $result;
   if (empty($empFname) || empty($empLname) || empty($emptyEmail) || empty($empPwd) || empty($empPwdConfirm)) {
-    $result = false;
-  } else {
     $result = true;
+  } else {
+    $result = false;
   }
   return $result;
 }
