@@ -17,8 +17,8 @@ echo '
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
                 </div>
                 <form action="assets/includes/login/login.inc.php" method="post">
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" id="password"></div>
+                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" name="email" id="email"></div>
+                    <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" name="pwd" id="password"></div>
                     <div class="form-group">
                         <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
                     </div><button class="btn btn-primary btn-block" type="submit" name="loginSubmit">Log In</button></form>
