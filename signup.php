@@ -20,13 +20,13 @@ session_start();
                     <h2 class="text-info">Registrationi</h2>
                     <p>This page is to register an employee only accessable by the admin.</p>
                 </div>
-                <form>
+                <form action="./assets/includes/login/signup.inc.php" method="post">
                     <div class="form-group"><label for="name">First Name</label><input class="form-control item" name="fname" type="text" id="name"></div>
                     <div class="form-group"><label for="name">Last Name</label><input class="form-control item" name="lname" type="text" id="name"></div>
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" name="email" type="email" id="email"></div>
                     <div class="form-group"><label for="password">Password</label><input class="form-control item" name="pwd" type="password" placeholder="*****************" id="password"></div>
                     <div class="form-group"><label for="password">Confirm Password</label><input class="form-control item" name="pwdConfirm" type="password" placeholder="*****************" id="password"></div>
-                    <button class="btn btn-primary btn-block" type="submit">Sign Up</button></form>
+                    <button class="btn btn-primary btn-block" type="submit" name="addEmpSubmit">Sign Up</button></form>
             </div>
             <?php
               if(isset($_GET["error"])) {
