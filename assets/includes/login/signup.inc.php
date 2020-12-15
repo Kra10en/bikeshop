@@ -17,7 +17,7 @@ if (isset($_POST["addEmpSubmit"])) {
 #    header("location: ../../../signup.php?error=emptyfields");
 #    exit();
 #  }
-  if (wrongEmail($empEmail) == true ) {
+  if (wrongEmail($empEmail) == false ) {
     header("location: ../../../signup.php?error=wrongemail");
     exit();
   }
