@@ -76,7 +76,7 @@ function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
   exit();
 }
 #-----------------------------LOGIN-----------------------------------------------------------
-
+#function been created to check if fields are empty when logging in
 function emptyFieldSignup($empEmail, $empPwd) {
   $result;
   if (empty($emptyEmail) || empty($empPwd)) {
@@ -85,4 +85,27 @@ function emptyFieldSignup($empEmail, $empPwd) {
     $result = false;
   }
   return $result;
+}
+
+#function created to log the user in.
+function loginEmp($conn, $empEmail, $empPwd) {
+  $emailExists = emailExists($conn, $empEmail);
+
+  if ($emailExists === false) {
+    header("location: ../../../login.php?error=invalidlogin");
+  }
+  $empPwdHashed = $emailExists["password"];
+
+  $checkPwd = password_verify($empPwd, $empPwdHashed);
+
+  if ($checkPwd === true) {
+    session_start();
+    $_SESSION["userID"] = $emailExists["employee-id"];
+    $_SESSION["userE"] = $emailExists["e-mail"];
+    header("location: ../../../employeeDash.php");
+    exit();
+  } else ($checkPwd === false) {
+    header("location: ../../../login.php?error=invalidlogin");
+    exit();
+  }
 }
