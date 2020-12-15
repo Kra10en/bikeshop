@@ -2,7 +2,7 @@
 
 $serverLocation = "localhost";
 $userDB = "nick";
-$paswdDB = "";
+$paswdDB = "A#acx?$v^L3E$WAsAR@";
 $nameDB = "bikeshop";
 
 $conn = mysqli_connect($serverLocation, $userDB, $paswdDB, $nameDB);
