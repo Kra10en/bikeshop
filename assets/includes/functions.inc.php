@@ -77,7 +77,7 @@ function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
 }
 #-----------------------------LOGIN-----------------------------------------------------------
 #function been created to check if fields are empty when logging in
-function emptyFieldSignup($empEmail, $empPwd) {
+function emptyFieldLogin($empEmail, $empPwd) {
   $result;
   if (empty($emptyEmail) || empty($empPwd)) {
     $result = true;
