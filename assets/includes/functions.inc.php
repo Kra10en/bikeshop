@@ -105,7 +105,7 @@ function loginEmp($conn, $empEmail, $empPwd) {
     $_SESSION["userE"] = $emailExists["e-mail"];
     header("location: ../../../employeeDash.php");
     exit();
-  } else ($checkPwd === false) {
+  } else if ($checkPwd === false) {
     header("location: ../../../login.php?error=invalidlogin");
     exit();
   }
