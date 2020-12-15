@@ -7,7 +7,7 @@ if (isset($_POST["addEmpSubmit"])) {
   $empPwd = $_POST["pwd"];
   $empPwdConfirm = $_POST["pwdConfirm"];
 
-  require_once 'adminConn.inc.php';
+  require_once '../conn/adminConn.inc.php';
   require_once '../functions.inc.php';
 
   if (emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) == true ) {
