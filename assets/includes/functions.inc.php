@@ -26,9 +26,9 @@ function wrongEmail($empEmail) {
 function passwordConfirm($empPwd, $empPwdConfirm) {
   $result;
   if ($empPwd == $empPwdConfirm) {
-    $result = false;
-  } else {
     $result = true;
+  } else {
+    $result = false;
   }
   return $result;
 }
