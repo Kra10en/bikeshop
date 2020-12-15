@@ -21,3 +21,14 @@ function wrongUID($empUID) {
   }
   return $result;
 }
+
+#function used in the signup.inc.php used to check if the email is in the proper format
+function wrongEmail($empEmail) {
+  $result;
+  if (filter_var($email, FILTER_VALIDATE_EMAIL) {
+    $result = false;
+  } else {
+    $result = true;
+  }
+  return $result;
+}
