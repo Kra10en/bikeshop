@@ -1,5 +1,5 @@
 <?php
-<?php phpinfo(); ?> 
+phpinfo(); 
 $serverLocation = "localhost";
 $userDB = "nick";
 $paswdDB = "A#acx?\$v^L3E\$WAsAR@";
