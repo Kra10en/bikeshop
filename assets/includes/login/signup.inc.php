@@ -25,7 +25,7 @@ if (isset($_POST["addEmpSubmit"])) {
     header("location: ../../../signup.php?error=nomatchpasswords");
     exit();
   }
-  if (emailExists($conn, $empEmail) == false ) {
+  if (emailExists($conn, $empEmail) == true ) {
     header("location: ../../../signup.php?error=emailexists");
     exit();
   }
