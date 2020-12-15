@@ -36,7 +36,7 @@ function passwordConfirm($empPwd, $empPwdConfirm) {
 }
 
 function emailExists($conn, $empEmail) {
-  $sql = "SELECT * FROM person WHERE "e-mail"=?; ";
+  $sql = "SELECT * FROM person WHERE 'e-mail'=?; ";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlfail");
