@@ -1,9 +1,9 @@
 <?php
 
 # function used in the signup.inc.php used to check if fields are empty
-function emptyFieldSignup($empName, $empEmail, $empPwd, $empPwdConfirm) {
+function emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) {
   $result;
-  if (empty($empName) || empty($emptyEmail) || empty($empPwd) || empty($empPwdConfirm)) {
+  if (empty($empFname) || empty($empLname) || empty($emptyEmail) || empty($empPwd) || empty($empPwdConfirm)) {
     $result = true;
   } else {
     $result = false;
@@ -54,4 +54,22 @@ function emailExists($conn, $empEmail) {
   }
 
   mysqli_stmt_close($stmt);
+}
+
+function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
+  $sql = "call add_employee(?,?,?)";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlFailed");
+    exit();
+  }
+
+  $empPwdHashed = password_hash($empPwd, PASSWORD_DEFAULT);
+
+  mysqli_stmt_bind_param($stmt, "ssss", $empFname, $empLname, $empEmail, $empPwdHashed);
+  mysqli_stmt_execute($stmt);
+  mysqli_stmt_close($stmt);
+
+  header("location: ../../../signup.php?error=noerrorUserBeenCreated");
+  exit();
 }

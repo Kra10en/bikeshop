@@ -1,7 +1,8 @@
 <?php
 
 if (isset($_POST["addEmpSubmit"])) {
-  $empName = $_POST["name"];
+  $empFname = $_POST["fname"];
+  $empLname = $_POST["lname"];
   $empEmail = $_POST["email"];
   $empPwd = $_POST["pwd"];
   $empPwdConfirm = $_POST["pwdConfirm"];
@@ -9,7 +10,7 @@ if (isset($_POST["addEmpSubmit"])) {
   require_once 'adminConn.inc.php';
   require_once 'functions.inc.php';
 
-  if (emptyFieldSignup($empName, $empEmail, $empPwd, $empPwdConfirm) == true ) {
+  if (emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) == true ) {
     header("location: ../../../signup.php?error=emptyField");
     exit();
   }
@@ -26,7 +27,7 @@ if (isset($_POST["addEmpSubmit"])) {
     exit();
   }
 
-  createEmp($conn, $empName, $empEmail, $empPwd);
+  createEmp($conn, $empFname, $empLname, $empEmail, $empPwd);
 
 }else {
   header("location: ../../../signup.php");
