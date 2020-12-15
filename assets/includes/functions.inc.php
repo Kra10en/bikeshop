@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 
 # function used in the signup.inc.php used to check if fields are empty
 function emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) {

@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
 if (isset($_POST["addEmpSubmit"])) {
   $empFname = $_POST["fname"];
   $empLname = $_POST["lname"];
