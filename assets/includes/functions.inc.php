@@ -75,3 +75,14 @@ function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
   header("location: ../../../signup.php?error=noerror");
   exit();
 }
+#-----------------------------LOGIN-----------------------------------------------------------
+
+function emptyFieldSignup($empEmail, $empPwd) {
+  $result;
+  if (empty($emptyEmail) || empty($empPwd)) {
+    $result = true;
+  } else {
+    $result = false;
+  }
+  return $result;
+}
