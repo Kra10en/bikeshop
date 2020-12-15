@@ -13,10 +13,10 @@ if (isset($_POST["addEmpSubmit"])) {
   require_once '../conn/adminConn.inc.php';
   require_once '../functions.inc.php';
 
-  if (emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) !== false ) {
-    header("location: ../../../signup.php?error=emptyfields");
-    exit();
-  }
+#  if (emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) !== false ) {
+#    header("location: ../../../signup.php?error=emptyfields");
+#    exit();
+#  }
   if (wrongEmail($empEmail) == true ) {
     header("location: ../../../signup.php?error=wrongemail");
     exit();
