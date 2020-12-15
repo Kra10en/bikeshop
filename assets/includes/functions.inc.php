@@ -57,7 +57,7 @@ function emailExists($conn, $empEmail) {
 }
 
 function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
-  $sql = "call add_employee(?,?,?)";
+  $sql = "call add_employee(?,?,?,?)";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
     header("location: ../../../signup.php?error=sqlFailed");
