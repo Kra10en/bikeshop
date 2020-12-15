@@ -28,7 +28,7 @@ session_start();
                     <div class="form-group"><label for="password">Confirm Password</label><input class="form-control item" name="pwdConfirm" type="password" placeholder="*****************" id="password"></div>
                     <button class="btn btn-primary btn-block" type="submit" name="addEmpSubmit">Sign Up</button></form>
             </div>
-            <?phpcall add_employee("Big", "chungus", "superswag@yahoo.com", "boink");
+            <?php
               if(isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyfields") {
                   echo "<p>Fill in the fields</p>";
