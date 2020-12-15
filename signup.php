@@ -24,12 +24,30 @@ session_start();
                     <div class="form-group"><label for="name">First Name</label><input class="form-control item" name="fname" type="text" id="name"></div>
                     <div class="form-group"><label for="name">Last Name</label><input class="form-control item" name="lname" type="text" id="name"></div>
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" name="email" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" placeholder="*****************" id="password"></div>
-                    <div class="form-group"><label for="password">Confirm Password</label><input class="form-control item" type="password" placeholder="*****************" id="password"></div>
+                    <div class="form-group"><label for="password">Password</label><input class="form-control item" name="pwd" type="password" placeholder="*****************" id="password"></div>
+                    <div class="form-group"><label for="password">Confirm Password</label><input class="form-control item" name="pwdConfirm" type="password" placeholder="*****************" id="password"></div>
                     <button class="btn btn-primary btn-block" type="submit">Sign Up</button></form>
             </div>
         </section>
     </main>
+
+    <?php
+      if(isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyfields") {
+          echo "<p>Fill in the fields</p>";
+        }elseif ($_GET["error"] == "wrongemail") {
+
+        }elseif ($_GET["error"] == "nomatchpasswords") {
+
+        }elseif ($_GET["error"] == "emailexists") {
+
+        }elseif ($_GET["error"] == "sqlfail") {
+
+        }elseif ($_GET["error"] == "noerror") {
+
+        }
+      }
+     ?>
 
 <?php
 #=================================END-BODY======================================

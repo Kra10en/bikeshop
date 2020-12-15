@@ -37,7 +37,7 @@ function emailExists($conn, $empEmail) {
   $sql = "SELECT * FROM person WHERE `e-mail` = ?; ";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../../../signup.php?error=sqlFailed");
+    header("location: ../../../signup.php?error=sqlfail");
     exit();
   }
 
@@ -60,7 +60,7 @@ function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
   $sql = "call add_employee(?,?,?,?)";
   $stmt = mysqli_stmt_init($conn);
   if(!mysqli_stmt_prepare($stmt, $sql)) {
-    header("location: ../../../signup.php?error=sqlFailed");
+    header("location: ../../../signup.php?error=sqlfail");
     exit();
   }
 
@@ -70,6 +70,6 @@ function createEmp($conn, $empFname, $empLname, $empEmail, $empPwd) {
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
 
-  header("location: ../../../signup.php?error=noerrorUserBeenCreated");
+  header("location: ../../../signup.php?error=noerror");
   exit();
 }

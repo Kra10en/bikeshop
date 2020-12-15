@@ -11,19 +11,19 @@ if (isset($_POST["addEmpSubmit"])) {
   require_once 'functions.inc.php';
 
   if (emptyFieldSignup($empFname, $empLname, $empEmail, $empPwd, $empPwdConfirm) == true ) {
-    header("location: ../../../signup.php?error=emptyField");
+    header("location: ../../../signup.php?error=emptyfields");
     exit();
   }
   if (wrongEmail($empEmail) == true ) {
-    header("location: ../../../signup.php?error=wrongEmail");
+    header("location: ../../../signup.php?error=wrongemail");
     exit();
   }
   if (passwordConfirm($empPwd, $empPwdConfirm) == true ) {
-    header("location: ../../../signup.php?error=passwordsNotMatching");
+    header("location: ../../../signup.php?error=nomatchpasswords");
     exit();
   }
   if (emailExists($conn, $empEmail) == true ) {
-    header("location: ../../../signup.php?error=emailExists!");
+    header("location: ../../../signup.php?error=emailexists");
     exit();
   }
 
