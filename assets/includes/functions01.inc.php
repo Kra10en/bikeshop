@@ -75,3 +75,35 @@ function showEmp($conn) {
     header("location: ../../../signup.php?error=sqlfail");
     exit();
   }
+
+      function avgSales_today($conn) {
+  $sql = "call salesavg_today();";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlfail");
+    exit();
+  }
+
+      function avgSales_week($conn) {
+  $sql = "call salesavg_today();";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlfail");
+    exit();
+  }
+
+      function avgSales_month($conn) {
+  $sql = "call salesavg_today();";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlfail");
+    exit();
+  }
+
+      function avgSales_year($conn) {
+  $sql = "call salesavg_today();";
+  $stmt = mysqli_stmt_init($conn);
+  if(!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ../../../signup.php?error=sqlfail");
+    exit();
+  }
